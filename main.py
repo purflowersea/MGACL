@@ -32,8 +32,8 @@ def init_args(user_args=None):
     parser.add_argument('--folds', type=int, default=5)
     parser.add_argument('--layer', type=int, default=2)
 
-    parser.add_argument('--lr', type=float, default=0.0004)
-    parser.add_argument('--weight_decay', type=float, default=0.0001)
+    parser.add_argument('--lr', type=float, default=0.001)
+    parser.add_argument('--weight_decay', type=float, default=0.0002)
     parser.add_argument('--batch_size', type=int, default=128)
 
     parser.add_argument('--model_episodes', type=int, default=100)
@@ -46,7 +46,7 @@ def init_args(user_args=None):
     parser.add_argument('--fixed_num', type=int, default=32)
 
     # Graphormer
-    parser.add_argument("--d_dim", type=int, default=256)
+    parser.add_argument("--d_dim", type=int, default=64)
     parser.add_argument("--num_heads", type=int, default=4)
     parser.add_argument("--max_smiles_degree", type=int, default=300)
     parser.add_argument("--max_graph_degree", type=int, default=600)
