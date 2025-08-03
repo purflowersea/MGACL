@@ -27,7 +27,7 @@ def init_args(user_args=None):
 
     parser.add_argument('--model_name', type=str, default='mgacl')
 
-    parser.add_argument('--dataset', type=str, default="kegg")
+    parser.add_argument('--dataset', type=str, default="drugbank")
 
     parser.add_argument('--folds', type=int, default=5)
     parser.add_argument('--layer', type=int, default=2)
@@ -138,8 +138,6 @@ def split_fold(folds, dataset, labels, scenario_type='random'):
 
 def load_data(args):
 
-    ##这个逻辑是这样的:先读出ddi中所有drug的数量，并不一定是全部的drug
-
     dataset = args.dataset
 
     data_path = "dataset/" + dataset + "/"
@@ -158,9 +156,6 @@ def load_data(args):
     print("load drug smiles graphs!!")
     # 生成分子图，同时保存 SMILES 序列
     smile_graph, num_rel_mol_update, max_smiles_degree = smile_to_graph(data_path, ligands)
-    
-    # # 检查 smile_graph 的内容
-    # print("Sample of smile_graph:", list(smile_graph.items())[:5])  # 仅打印前5个分子图的内容
 
     print("load networks !!")
     num_node, network_edge_index, network_rel_index, num_rel = read_network(data_path + "networks.txt")
