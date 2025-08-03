@@ -1,7 +1,7 @@
 # Multimodal Graph-Aware Dual Contrastive Learning for Drug-Drug Interaction Prediction
 
 
-## Installation & Dependencies
+# Installation & Dependencies
 
 
 MGACL is mainly tested in a Linux environment, and its dependencies are listed below.
@@ -25,7 +25,7 @@ MGACL is mainly tested in a Linux environment, and its dependencies are listed b
 | numpy           | 1.26.4   |
 
 
-### Run MGACL
+# Run MGACL
 
 
 You can train MGACL with the following command:
