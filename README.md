@@ -4,7 +4,7 @@
 # Installation & Dependencies
 
 
-MGACL is mainly tested in a Linux environment, and its dependencies are listed below.
+MHGCL is mainly tested in a Linux environment, and its dependencies are listed below.
 
 
 | Package         | Version  |
@@ -28,7 +28,7 @@ MGACL is mainly tested in a Linux environment, and its dependencies are listed b
 # Run MHGCL
 
 
-You can train MGACL with the following command:
+You can train MHGCL with the following command:
 
 
 ```bash
