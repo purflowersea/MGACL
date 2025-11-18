@@ -9,7 +9,7 @@ import json
 import copy
 from utils import *
 from sklearn.metrics import f1_score, roc_auc_score, average_precision_score
-from model.mgacl import MGACL
+from model.mhgcl import MHGCL
 from torch_geometric.utils import degree
 from torch.utils.data.distributed import DistributedSampler
 from data_process import smile_to_graph, read_smiles, read_interactions, generate_node_subgraphs, read_network, read_targets, load_protein_embeddings
@@ -23,9 +23,9 @@ from data_process import load_id_mapping
 
 def init_args(user_args=None):
 
-    parser = argparse.ArgumentParser(description='MGACL')
+    parser = argparse.ArgumentParser(description='MHGCL')
 
-    parser.add_argument('--model_name', type=str, default='mgacl')
+    parser.add_argument('--model_name', type=str, default='mhgcl')
 
     parser.add_argument('--dataset', type=str, default="drugbank")
 
@@ -230,8 +230,8 @@ def save_results(save_dir, args, results_list):
 
 
 def init_model(args, dataset_statistics):
-    if args.model_name == 'mgacl':
-        model = MGACL(args=args,
+    if args.model_name == 'mhgcl':
+        model = MHGCL(args=args,
                       max_layer=args.layer,
                       num_features_drug = 67,
                       num_nodes=dataset_statistics['num_nodes'],
