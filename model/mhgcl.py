@@ -42,11 +42,11 @@ class NodeFeatures(torch.nn.Module):
 
         return node_feature
 
-class MGACL(torch.nn.Module):
+class MHGCL(torch.nn.Module):
     def __init__(self, args, max_layer = 6, num_features_drug = 78, num_nodes = 200, num_relations_mol = 10, num_relations_graph = 10, output_dim=64, max_degree_graph=100, max_degree_node=100, sub_coeff = 0.2, mi_coeff = 0.5, dropout=0.2, device = 'cuda', num_heads = 4, fusion_temperature=1.0, contrastive_weight=0.1, mol_ratio=0.5, kg_ratio=0.5):
-        super(MGACL, self).__init__()
+        super(MHGCL, self).__init__()
 
-        print("MGACL Loaded")
+        print("MHGCL Loaded")
         self.device = device
 
         self.layers = max_layer
