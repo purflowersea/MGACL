@@ -1,4 +1,4 @@
-# Multimodal Graph-Aware Dual Contrastive Learning for Drug-Drug Interaction Prediction
+# Multi-source Heterogeneous Data Fusion with Graph-Aware Dual Contrastive Learning for Drug–Drug Interaction Prediction
 
 
 # Installation & Dependencies
@@ -25,7 +25,7 @@ MGACL is mainly tested in a Linux environment, and its dependencies are listed b
 | numpy           | 1.26.4   |
 
 
-# Run MGACL
+# Run MHGCL
 
 
 You can train MGACL with the following command:
